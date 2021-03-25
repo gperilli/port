@@ -267,14 +267,14 @@ border: 0px solid #eee;
 				<h3 id="mytracks" style="font-weight: bold; display: inline-block; clear: left; margin: 0px;">My Tracks</h3>
 				
 				<div style="margin-top:20px;" class="border">
-				<p style="display: block;  word-wrap: break-word; border: 0px solid #000; margin: 0px;" class="border"><b>Analog Tom</b> - a 4 minute electronica track. Inspired by EDM/IDM, Analog Tom was created entirely with a drum sample pack and freeware synths. <br><br>Instruments (Software): Sitala VST sampler, Digits VST synth, Ardour DAW.</p>
+				<p style="display: block;  word-wrap: break-word; border: 0px solid #000; margin: 0px;" class="border"><b>Analog Tom</b> - <span id="AnalogTomtxt">a 4 minute electronica track. Inspired by EDM/IDM, Analog Tom was created entirely with a drum sample pack and freeware synths.</span> <br><br><span id="AnalogTomInstr">Instruments (Software): Sitala VST sampler, Digits VST synth, Ardour DAW.</span></p>
 				</div>
 			
 				<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/991002436&color=%23040404&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
                 
 				
 				<div style="margin-top:20px;" class="border">
-				<p style="display: block;  word-wrap: break-word; border: 0px solid #000; margin: 0px;" class="border"><b>RTSEQS128</b> - a 3 minute track produced in Italy. RTSEQS128 was coded in PureData and SonicPi (SuperCollider) and then mixed with Ardour. The piece features a set of chords that have a fluctuating pulse (coded in PureData), in a kind of wave pattern, and layered over this there is a melody and a more percussive track (coded in SonicPi) that slides between perceptible pulse and a tone. <br><br>Instruments (Software): PureData, SonicPi, Digits VST synth, Ardour DAW.</p>
+				<p style="display: block;  word-wrap: break-word; border: 0px solid #000; margin: 0px;" class="border"><b>RTSEQS128</b> - <span id="RTSEQS128txt">a 3 minute track produced in Italy. RTSEQS128 was coded in PureData and SonicPi (SuperCollider) and then mixed with Ardour. The piece features a set of chords that have a fluctuating pulse (coded in PureData), in a kind of wave pattern, and layered over this there is a melody and a more percussive track (coded in SonicPi) that slides between perceptible pulse and a tone.</span> <br><br><span id="RTSEQS128Instr">Instruments (Software): PureData, SonicPi, Digits VST synth, Ardour DAW.</span></p>
 				</div>
 				
 				<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/476380473&color=%23040404&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
@@ -366,7 +366,11 @@ border: 0px solid #eee;
 		
 		
 		//My Tracks Text
+		AnalogTomtxt: "a 4 minute electronica track. Inspired by EDM/IDM, Analog Tom was created entirely with a drum sample pack and freeware synths.",
+		AnalogTomInstr: "Instruments &#40;Software&#41;&#58; Sitala VST sampler, Digits VST synth, Ardour DAW.",
 		
+		RTSEQS128txt: "a 3 minute track produced in Italy. RTSEQS128 was coded in PureData and SonicPi &#40;SuperCollider&#41; and then mixed with Ardour. The piece features a set of chords that have a fluctuating pulse &#40;coded in PureData&#41;, in a kind of wave pattern, and layered over this there is a melody and a more percussive track &#40;coded in SonicPi&#41; that slides between perceptible pulse and a tone.",
+		RTSEQS128Instr: "Instruments &#40;Software&#41;&#58; PureData, SonicPi, Digits VST synth, Ardour DAW.",
 		
 		//CV Text
 		educationtxt: "education",
@@ -412,6 +416,11 @@ border: 0px solid #eee;
 
 		
 		//My Tracks Text
+		AnalogTomtxt: "4分のエレクトロニカの作曲。 EDM / IDMに触発されたAnalogTomは、無料のドラムサンプルパックとフリーウェアシンセで完全に作成されました。",
+		AnalogTomInstr: "楽器 &#40;ソフトウェア&#41;&#58; Sitala VST sampler, Digits VST synth, Ardour DAW.",
+		
+		RTSEQS128txt: "イタリアで作曲された3分の曲。 RTSEQS128は、PureDataとSonicPi（SuperCollider）で創生され、Ardourでミクスされました。この作曲は、一種の波のパターンで、変動するパルスを備えています。",
+		RTSEQS128Instr: "楽器 &#40;ソフトウェア&#41;&#58; PureData, SonicPi, Digits VST synth, Ardour DAW.",
 		
 		
 		//CV Text
@@ -469,7 +478,10 @@ function LSel(L1) {
 	document.getElementById("monotxtitm3").innerHTML = PgeTxt[L1]["monotxtitm3"];
 	
 	//mytracks
-	
+	document.getElementById("AnalogTomtxt").innerHTML = PgeTxt[L1]["AnalogTomtxt"];
+	document.getElementById("AnalogTomInstr").innerHTML = PgeTxt[L1]["AnalogTomInstr"];
+	document.getElementById("RTSEQS128txt").innerHTML = PgeTxt[L1]["RTSEQS128txt"];
+	document.getElementById("RTSEQS128Instr").innerHTML = PgeTxt[L1]["RTSEQS128Instr"];
 	
 	//briefcv
 	document.getElementById("educationtxt").innerHTML = PgeTxt[L1]["educationtxt"];
