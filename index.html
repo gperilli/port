@@ -298,19 +298,19 @@ border: 0px solid #eee;
 				<h2 id="briefcv" style="text-align: center; font-weight: bold; display: inline-block; margin: 0px;">Brief CV</h2>
 			</div>
 			
-				<h3 style="font-weight: bold; display: inline-block; clear: left; margin: 0px;" class="border">Education</h3>
-				<p style="display: block;  word-wrap: break-word; margin-left: 10px;">Electronic Music Bsc 2000. University of Hertfordshire</p>
-				<p style="display: block;  word-wrap: break-word; margin-left: 10px;">Diploma di Primo Livello in Violino. 2018. Conservatorio di Perugia</p>
+				<h3 id="educationtxt" style="font-weight: bold; display: inline-block; clear: left; margin: 0px;" class="border">Education</h3>
+				<p id="educationtxtitm1" style="display: block;  word-wrap: break-word; margin-left: 10px;">Electronic Music Bsc 2000. University of Hertfordshire</p>
+				<p id="educationtxtitm2" style="display: block;  word-wrap: break-word; margin-left: 10px;">Diploma di Primo Livello in Violino. 2018. Conservatorio di Perugia</p>
 			</div>
 			
 			<div style="position: relative; float: left; width: 100%;" class="border">
-				<h3 style="font-weight: bold; display: inline-block; clear: left; margin: 0px;">Skills</h3><br>
-				<h4 style="font-weight: bold; display: inline-block; clear: left; margin: 0px;">Languages</h4>
-				<p style="display: block;  word-wrap: break-word; margin-left: 10px;">Italian: Pretty fluent. C1 on the CILS CEFR test.</p>
-				<p style="display: block;  word-wrap: break-word; margin-left: 10px;">Japanese: Not bad. N3 on the JLPT.</p>
-				<h4 style="font-weight: bold; display: inline-block; clear: left; margin: 0px;">Coding</h4>
-				<p style="display: block;  word-wrap: break-word; margin-left: 10px;">HTML, CSS, Javascript: Good working knowledge of web design from scratch. Over 3 years experience developing single page apps.</p>
-				<p style="display: block;  word-wrap: break-word; margin-left: 10px;">Puredata: Extensive knwoledge of sound design and app design for audio and music production.</p>
+				<h3 id="skillstxt" style="font-weight: bold; display: inline-block; clear: left; margin: 0px;">Skills</h3><br>
+				<h4 id="languagestxt" style="font-weight: bold; display: inline-block; clear: left; margin: 0px;">Languages</h4>
+				<p id="languagestxtitm1" style="display: block;  word-wrap: break-word; margin-left: 10px;">Italian: Pretty fluent. C1 on the CILS CEFR test.</p>
+				<p id="languagestxtitm2" style="display: block;  word-wrap: break-word; margin-left: 10px;">Japanese: Not bad. N3 on the JLPT.</p>
+				<h4 id="programmingtxt" style="font-weight: bold; display: inline-block; clear: left; margin: 0px;">Coding</h4>
+				<p id="programmingtxtitm1" style="display: block;  word-wrap: break-word; margin-left: 10px;">HTML, CSS, Javascript: Good working knowledge of web design from scratch.</p>
+				<p id="programmingtxtitm2" style="display: block;  word-wrap: break-word; margin-left: 10px;">Puredata: Extensive knwoledge of sound design and app design for audio and music production.</p>
 			</div>
 		
 		</div>
@@ -369,7 +369,18 @@ border: 0px solid #eee;
 		
 		
 		//CV Text
+		educationtxt: "education",
+		educationtxtitm1: "Electronic Music Bsc 2000. University of Hertfordshire",
+		educationtxtitm2: "Diploma di Primo Livello in Violino. 2018. Conservatorio di Perugia",
 		
+		skillstxt: "Skils",
+		languagestxt: "Languages",
+		languagestxtitm1: "Italian: Pretty fluent. C1 on the CILS CEFR test.",
+		languagestxtitm2: "Japanese: Not bad. N3 on the JLPT.",
+		
+		programmingtxt: "Coding",
+		programmingtxtitm1: "HTML, CSS, Javascript: Good working knowledge of web design from scratch.",
+		programmingtxtitm2: "Puredata: Extensive knwoledge of sound design and app design for audio and music production.",
 		
 		},
 
@@ -404,10 +415,18 @@ border: 0px solid #eee;
 		
 		
 		//CV Text
-		 
+		educationtxt: "学歴",
+		educationtxtitm1: "電子音楽 Bsc 2000. ハートフォードシア大学(イギリス）",
+		educationtxtitm2: "バイオリン科 一級のディプロマ. 2018. ペルージャ市音楽院(イタリア）",
 		
-	
+		skillstxt: "スキル",
+		languagestxt: "外国語",
+		languagestxtitm1: "イタリア語: 流暢。CILS(CEFR)のC1",
+		languagestxtitm2: "日本語: 悪くない。 JLPTのN3",
 		
+		programmingtxt: "プログラミング",
+		programmingtxtitm1: "HTML, CSS, Javascript: ゼロからのウェブデザインの優れた実務知識。",
+		programmingtxtitm2: "Puredata: オーディオおよび音楽制作のためのサウンドデザインとアプリデザインに関する幅広い知識。",
  
 		},
 	}
@@ -453,9 +472,18 @@ function LSel(L1) {
 	
 	
 	//briefcv
+	document.getElementById("educationtxt").innerHTML = PgeTxt[L1]["educationtxt"];
+	document.getElementById("educationtxtitm1").innerHTML = PgeTxt[L1]["educationtxtitm1"];
+	document.getElementById("educationtxtitm2").innerHTML = PgeTxt[L1]["educationtxtitm2"];
 	
+	document.getElementById("skillstxt").innerHTML = PgeTxt[L1]["skillstxt"];
 	
-	//food
+	document.getElementById("languagestxt").innerHTML = PgeTxt[L1]["languagestxt"];
+	document.getElementById("languagestxtitm1").innerHTML = PgeTxt[L1]["languagestxtitm1"];
+	document.getElementById("languagestxtitm2").innerHTML = PgeTxt[L1]["languagestxtitm2"];
+	document.getElementById("programmingtxt").innerHTML = PgeTxt[L1]["programmingtxt"];
+	document.getElementById("programmingtxtitm1").innerHTML = PgeTxt[L1]["programmingtxtitm1"];
+	document.getElementById("programmingtxtitm2").innerHTML = PgeTxt[L1]["programmingtxtitm2"];
 	
 	
 }
