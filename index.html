@@ -551,7 +551,7 @@ Prjcts = {
   PrjctItmXHref: "https://gperilli.github.io/knhs-ge1/index",
   PrjctItmXRepo: "https://github.com/gperilli/knhs-ge1",
   PrjctItmResp: "3",
-  PrjctItmXCvrImg: "KNHSGE1-PortImg3.png",
+  PrjctItmXCvrImg: "KnhsGe1-PortImg3.png",
   PrjctItmXId: "ge1ttl",
   PrjctItmXNmeENG: "GE1",
   PrjctItmXNmeJPN: "GE1（ジーイー１)",
@@ -668,13 +668,13 @@ function modaldisp(x) {
 
   //Modal Responsiveness Images
   if (Prjcts[x]["PrjctItmResp"] == '3') {
-    document.getElementsByClassName("MdlRespImgs")[0].src = "/".concat(Prjcts[x]["PrjctItmXFleref"], "-RespDemoImg-PC.png");
-    document.getElementsByClassName("MdlRespImgs")[1].src = "/".concat(Prjcts[x]["PrjctItmXFleref"], "-RespDemoImg-Tablet.png");
-    document.getElementsByClassName("MdlRespImgs")[2].src = "/".concat(Prjcts[x]["PrjctItmXFleref"], "-RespDemoImg-Phone.png");
+    document.getElementsByClassName("MdlRespImgs")[0].src = "".concat(Prjcts[x]["PrjctItmXFleref"], "-RespDemoImg-PC.png");
+    document.getElementsByClassName("MdlRespImgs")[1].src = "".concat(Prjcts[x]["PrjctItmXFleref"], "-RespDemoImg-Tablet.png");
+    document.getElementsByClassName("MdlRespImgs")[2].src = "".concat(Prjcts[x]["PrjctItmXFleref"], "-RespDemoImg-Phone.png");
     document.getElementsByClassName("MdlRespImgs")[1].style.display = "block";
     document.getElementsByClassName("MdlRespImgs")[2].style.display = "block";
   } else {
-    document.getElementsByClassName("MdlRespImgs")[0].src = "/".concat(Prjcts[x]["PrjctItmXFleref"], "-RespDemoImg-PC.png");
+    document.getElementsByClassName("MdlRespImgs")[0].src = "".concat(Prjcts[x]["PrjctItmXFleref"], "-RespDemoImg-PC.png");
     document.getElementsByClassName("MdlRespImgs")[1].style.display = "none";
     document.getElementsByClassName("MdlRespImgs")[2].style.display = "none";
   }
@@ -682,7 +682,7 @@ function modaldisp(x) {
 
   //MdlPrjctImgs
   for (i = 0; i < 4; i++) {
-      document.getElementsByClassName("MdlPrjctImgs")[i].src = "/".concat(Prjcts[x]["PrjctItmXFleref"], "-PortImg", (i +1), ".png");
+      document.getElementsByClassName("MdlPrjctImgs")[i].src = "".concat(Prjcts[x]["PrjctItmXFleref"], "-PortImg", (i +1), ".png");
   }
   //Titles
   L1 = localStorage.getItem("GPerilliPortLng");
