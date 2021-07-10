@@ -379,6 +379,7 @@ border: 0px solid #ddd;
 <!-- Prjct Detail Modal -->
 
   <div id="myModal" class="modal">
+
     <span class="close">&times;</span>
 
     <div id="CentralColumn" class="centralcolumn" style="margin: auto; padding: 0; border-radius: 10px;" align="center">
@@ -413,12 +414,19 @@ border: 0px solid #ddd;
                   <div class="MdlPrjctImgCnt" style=""><img class="MdlPrjctImgs" src="/Mono-PortImg3.png" style=""></div>
                   <div class="MdlPrjctImgCnt" style=""><img class="MdlPrjctImgs" src="/Mono-PortImg4.png" style=""></div>
                 </div>
+
+                <div id="XtrSpceBlk" align="left" style="padding-left: 3.5%; padding-right: 3.5%; margin-bottom: 20px;">
+                </div>
             </div>
+
+
+
         </div>
       </div>
   <!-- End Modal -->
   <!-- Spacer -->
     <div style="height: 40px; width: 100%; float: left;"></div>
+
   </div>
 
 
@@ -648,9 +656,11 @@ function StaggerLd() {
   }
 }
 
+var monoXtra = 0;
+
 // Project Details Modal display process
 function modaldisp(x) {
-  console.log(x);
+
 	modal = document.getElementById('myModal');
 	//modalImg = document.getElementById("modalimg");
 	span = document.getElementsByClassName("close")[0];
@@ -687,6 +697,12 @@ function modaldisp(x) {
   //MdlPrjct PrjctItmIntro
   document.getElementById("PrjctItmIntroTxt").innerHTML = Prjcts[x]["PrjctItmIntro"];
 
+
+  console.log("x var is ........................................".concat(x));
+  //Extra widget component for mono project
+  MonoPrjctExtras(x);
+
+
   span.onclick = function() {
 	  modal.style.display = "none";
 	}
@@ -695,4 +711,50 @@ function modaldisp(x) {
 
 }
 
+function MonoPrjctExtras(x) {
+  if (monoXtra == 0 && x == 3) {
+    var MonoIfrme = `
+    <iframe id="monoiframe" src="https://gperilli.github.io/mono/posts/p001/P001EngJpnWidget.html" width="100%" height="0px" scrolling="no" style="border: 1px solid #808080; border-radius: 3px; padding-top: 0px; overflow: hidden;"></iframe>
+    `
+    document.getElementById("XtrSpceBlk").insertAdjacentHTML("beforeend", MonoIfrme);
+    monoXtra = 1;
+  }
+
+  if (monoXtra == 1 && x !== 3) {
+    document.getElementById("monoiframe").remove();
+    monoXtra = 0;
+  }
+
+  if (monoXtra == 0 && x !== 3) {
+    monoXtra = 0;
+  }
+}
+//Iframe Script
+window.addEventListener("message", function(event) {
+        console.log("About to check origin for iframe height adjustment postmesage data.");
+        console.log(event.origin);
+        if (event.origin != "https://gperilli.github.io") {return;}
+        console.log("Origin confirmed. Iframe height adjusted.");
+        ifrelmnthght = event.data;
+        document.getElementById("monoiframe").style.height = "".concat(ifrelmnthght, "px")
+      }, false);
+
+//Resize function for Iframe
+document.getElementsByTagName("BODY")[0].onresize = function() {
+  if (monoXtra == 1) {
+    document.getElementById("monoiframe").remove();
+    monoXtra = 0;
+    setTimeout(WdgtReload(), 2000)
+  }
+
+function WdgtReload() {
+  var MonoIfrme = `
+  <iframe id="monoiframe" src="https://gperilli.github.io/mono/posts/p001/P001EngJpnWidget.html" width="100%" height="0px" scrolling="no" style="border: 1px solid #808080; border-radius: 3px; padding-top: 0px; overflow: hidden;"></iframe>
+  `
+  document.getElementById("XtrSpceBlk").insertAdjacentHTML("beforeend", MonoIfrme);
+  monoXtra = 1;
+}
+
+  //document.getElementById("demo").innerHTML = txt;
+};
 </script>
