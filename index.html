@@ -15,13 +15,87 @@
   scroll-behavior: smooth;
 
 }
-
+/* Text Styling */
 h1 {
     font-weight: 900;
     font-size: calc(38px + (52 - 38) * ((150vw - 300px) / (1440 - 300)));
     margin-left: 0px;
     float: left;
     margin-top: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.SectnTtls {
+  font-size: 1.1em;
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-top: 40px;
+  color: #0094a1;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+.Mnubtns {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-right: 20px;
+    margin-bottom: 10px;
+	float: left;
+    color: #0094a1;
+}
+
+.Mnubtns:hover {
+    text-decoration: underline;
+}
+
+.langbtns {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 0px;
+	margin-left: 10px;
+	float: right;
+    color: #0094a1;
+}
+
+.lbtnhlghtd {
+    cursor: normal;
+    border-bottom: 1px solid #0094a1;
+    color: #0094a1;
+}
+
+/* Play Button Icon */
+h5 {
+	font-size:0.9em;
+	border: 0px solid;
+	font-weight:normal;
+	display: inline;
+	margin-top: 0px;
+	color: black;
+}
+.icon {
+	display: inline-flex;
+	align-self: center;
+	z-index: 80;
+	background-color: white;
+}
+.icon svg, .icon img {
+	height: 1em;
+	width: 1em;
+	background-color: white;
+	cursor: pointer;
+}
+.icon.baseline svg, .icon img {
+	top: .125em;
+	position: relative;
+	border-radius: 50%;
+}
+.icon svg:hover {
+	background-color: #0094a1;
 }
 
 .centralcolumn {
@@ -31,6 +105,7 @@ h1 {
     padding-left: 10px;
     padding-right: 10px;
 overflow: hidden;
+
 }
 
 .modalColumn {
@@ -41,9 +116,16 @@ overflow: hidden;
   box-sizing: border-box;
 }
 
+.spacer {
+  width: 100%; height: 50px; float: left;
+}
+
+/* Projects Section */
 .PrjctGlryCnt {
   margin-left: -20px;
   margin-right: -20px;
+
+  float: left;
 }
 
 .PrjctCntrs {
@@ -74,7 +156,7 @@ overflow: hidden;
 .PrjctTtls {
     display: block;
     position: relative;
-    font-size: 0.9em;
+    font-size: 1.1em;
     color: #000;
     font-weight: 100;
     margin-top: 0px;
@@ -94,10 +176,8 @@ overflow: hidden;
 }
 
 
-a {
-    text-decoration: none;
-}
 
+/* Bio Section */
 .BioCol {
    width: 50%;
    float: left;
@@ -112,34 +192,7 @@ a {
     margin-left: 10px;
 }
 
-.Mnubtns {
-    display: inline-block;
-    cursor: pointer;
-    font-size: 1.0em;
-    margin-right: 20px;
-	float: left;
-    color: #0094a1;
-}
 
-.Mnubtns:hover {
-    text-decoration: underline;
-}
-
-.langbtns {
-    display: inline-block;
-    cursor: pointer;
-    font-size: 14px;
-    margin-bottom: 0px;
-	margin-left: 10px;
-	float: right;
-    color: #0094a1;
-}
-
-.lbtnhlghtd {
-    cursor: normal;
-    border-bottom: 1px solid #0094a1;
-    color: #0094a1;
-}
 
 .sociallnksT {
     position: relative;
@@ -156,7 +209,7 @@ opacity: 1;
 }
 
 .border {
-border: 0px solid #ddd;
+border: 1px solid #ddd;
 }
 
 .Dsply {
@@ -210,7 +263,7 @@ border: 0px solid #ddd;
 
 .close:hover,
 .close:focus {
-  color: #bbb;
+  color: #0094a1;
   text-decoration: none;
   cursor: pointer;
 }
@@ -229,10 +282,73 @@ border: 0px solid #ddd;
 }
 
 .MdlPrjctImgs {
-  width: 95%; box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  width: 95%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 
+
+  /* Play/Pause Button */
+.AudBtn-PauseBrs {
+	fill: #0094a1;;
+	display: none;
+}
+.AudBtn-PlayTri {
+	fill:#0094a1;;
+	stroke:#0094a1;;
+	stroke-width:17;
+	stroke-linejoin:round;
+}
+.icon svg:hover .AudBtn-PauseBrs{
+	fill: #fff;
+}
+.icon svg:hover .AudBtn-PlayTri{
+	fill:#fff;
+	stroke:#fff;
+}
+
+.AudTags {
+  border-radius: 3px;
+  color: #fff;
+  padding: 1.5px 2px 1.5px 2px;
+  margin-left: 3px;
+  margin-bottom: 3px;
+  margin-top: 3px;
+  float: right;
+  font-size: 0.85em;
+  display: none;
+}
+
+.Tag-AnalogTom {
+  background-color: #0094a1;
+  display: block;
+}
+
+.Tag-Kicks {
+  background-color: #0094a1;
+  display: block;
+}
+
+.Tag-Snare {
+  background-color: #0094a1;
+  display: block;
+}
+
+.Tag-StepSeq {
+  background-color: #0094a1;
+  display: block;
+}
+
+.AudioPlayerBlk {
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-bottom: 2px;
+  display: inline-block;
+}
 
 /* Responsiveness */
 @media (max-width: 880px) {
@@ -240,11 +356,11 @@ border: 0px solid #ddd;
 	width: 100%;
   float: left;
 	}
+
   .modal {
     padding-left: 10px;
     padding-right: 10px;
   }
-
 }
 
 
@@ -281,6 +397,12 @@ border: 0px solid #ddd;
     }
 }
 
+@media (max-width: 500px) {
+  .AudioPlayerBlk {
+    width: 100%;
+  }
+}
+
 </style>
 </head>
 
@@ -288,156 +410,148 @@ border: 0px solid #ddd;
 
 <div align=center style="width: 100%; ">
   <div id="CentralColumn" class="centralcolumn border" align=left style="position: relative; display: inline-block; background-color: #fff;">
-
+    <!-- Inner column with margins -->
     <div style="float: left; margin-left: -10px; margin-right: -10px;">
 
       <div style="border: 0px solid #ddd; float: left; width: 100%;">
-      <p id="LSelENG" class="langbtns" style="font-size: 14px;" onclick="LSel('ENG', 'USR')">English</p>
-      <p id="LSelJPN" class="langbtns" style="font-size: 12px; padding-top: 1px;" onclick="LSel('JPN', 'USR')">日本語</p><br><br>
+      <p id="LSelENG" class="langbtns" style="font-size: 14px;">English</p>
+      <p id="LSelJPN" class="langbtns" style="font-size: 12px; padding-top: 1px;">日本語</p><br><br>
 
       <a href="#projects"><p id="projectsMnu" class="Dsply Mnubtns">Projects</p></a>
       <a href="#mytracks"><p id="mytracksMnu" class="Dsply Mnubtns">My Tracks</p>
+      <a href="#audiowork"><p id="audioworkMnu" class="Dsply Mnubtns">Audio Work</p>
       <a href="#aboutme"><p id="aboutmeMnu" class="Dsply Mnubtns">About Me</p></a>
       </div>
 
-    <!-- PROJECTS -->
-    <p id="projects" class="Dsply" style="font-size: 0.9em; display: inline-block; margin-bottom: 10px; margin-top: 40px; color: #0094a1; margin-left: 0px; padding-left: 0px;" id="projects">Projects</p><br><br>
-    <div id="PrjctGlryCnt" class="PrjctGlryCnt" style="">
-    <!-- Projects Injected Here -->
-    </div>
+      <!-- PROJECTS -->
+      <p id="projects" class="Dsply SectnTtls" style="" id="projects">Projects</p><br><br>
+      <div id="PrjctGlryCnt" class="PrjctGlryCnt border" style="">
+        <!-- Projects Injected Here -->
+      </div>
 
-    <div style="width: 100%; height: 50px; float: left;"></div>
+      <!-- SPACER DIV -->
+      <div class="spacer border" style=""></div>
 
-    <!-- MYTRACKS -->
-    <p class="Dsply" id="mytracks" style="font-size: 0.9em; display: inline-block; color: #0094a1; float: left;" id="music">My Tracks</p><br><br>
+      <!-- MYTRACKS -->
+      <p id="mytracks" class="Dsply SectnTtls" style="">My Tracks</p><br><br>
+      <iframe class="Dsply" width="100%" height="166" scrolling="no" frameborder="no" style="margin-bottom: 30px;" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/991002436&color=%23040404&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+      <iframe class="Dsply" width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/476380473&color=%23040404&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 
-    <iframe class="Dsply" width="100%" height="166" scrolling="no" frameborder="no" style="margin-bottom: 30px;" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/991002436&color=%23040404&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-    <iframe class="Dsply" width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/476380473&color=%23040404&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+      <!-- SPACER DIV -->
+      <div class="spacer border"></div>
 
-    <div style="width: 100%; height: 50px; float: left;"></div>
+      <!-- AUDIO WORK -->
+      <p id="audiowork" class="Dsply SectnTtls" style="">Audio Work</p><br><br>
+      <div class="Dsply" id="AudioWorkBlk" align="left" style="float: left;">
+      </div>
 
-    <!-- BIO -->
-    <p class="Dsply" id="aboutme" style="font-size: 0.9em; display: inline-block; margin-bottom: 10px; margin-top:40px; color: #0094a1;" id="aboutme">About Me</p>
-    <br><br>
-    <div class="BioCol border" style="">
-       <img class="Dsply BioColImg" src="Me2018b.jpg">
-       <p class="Dsply" id="gperilli">Gareth Perilli</p>
-       <p class="Dsply">English Language Teacher, EDM producer, Wanabe Programmer</p>
-       <p class="Dsply">Email: <a href="mailto:garethperilli@hotmail.co.jp">garethperilli@hotmail.co.jp</a></p>
-       <div style="float: right;">
-         <div class="Dsply sociallnksT border" style="">
-           <a class="border" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;" href="https://www.linkedin.com/in/gareth-perilli" rel="external">
-             <img style="display: block; float; left; position: relative; width: 100%;" src="linkedin.png" />
-           </a>
-         </div>
+      <!-- SPACER DIV -->
+      <div class="spacer border" style=""></div>
 
-         <div class="Dsply sociallnksT border" style="">
-           <a class="border" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;" href="https://www.facebook.com/gareth.perilli.1" rel="external">
-             <img style="display: block; float; left; position: relative; width: 100%;" src="facebook.png" />
-           </a>
-         </div>
+      <!-- BIO -->
+      <p id="aboutme" class="Dsply SectnTtls" style="">About Me</p>
+      <br><br>
+      <div class="BioCol border" style="">
+         <img class="Dsply BioColImg" src="Me2018b.jpg">
+         <p class="Dsply" id="gperilli">Gareth Perilli</p>
+         <p class="Dsply">Self Taught Programmer, EDM producer, TEFL Teacher</p>
+         <p class="Dsply">Email: <a href="mailto:garethperilli@hotmail.co.jp">garethperilli@hotmail.co.jp</a></p>
+         <div style="float: right;">
+           <div class="Dsply sociallnksT border" style="">
+             <a class="border" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;" href="https://www.linkedin.com/in/gareth-perilli" rel="external">
+               <img style="display: block; float; left; position: relative; width: 100%;" src="linkedin.png" />
+             </a>
+           </div>
 
-         <div class="Dsply sociallnksT border" style="">
-           <a class="border" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;" href="https://twitter.com/GarethPerilli" rel="external">
-             <img style="display: block; float; left; position: relative; width: 100%;" src="twitter.png" />
-           </a>
-         </div>
-
-         <div class="Dsply sociallnksT border" style="">
-           <a class="border" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;" href="https://github.com/gperilli" rel="external">
-             <img style="display: block; float; left; position: relative; width: 100%;" src="github.png" />
-           </a>
+           <div class="Dsply sociallnksT border" style="">
+             <a class="border" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;" href="https://github.com/gperilli" rel="external">
+               <img style="display: block; float; left; position: relative; width: 100%;" src="github.png" />
+             </a>
+           </div>
          </div>
        </div>
-     </div>
 
-     <div class="BioCol border" style="margin-bottom: 50px;">
-         <p class="Dsply" style="margin-top: 0px;"><b id="educationtxt">Education</b></p>
-         <p class="Dsply indent" id="educationtxtitm1">Electronic Music (Bsc 2000). University of Hertfordshire
-         <p class="Dsply indent"id="educationtxtitm2">Violin (Dip. 2018). Conservatorio di Perugia
+       <div class="BioCol border" style="margin-bottom: 50px;">
+           <p class="Dsply" style="margin-top: 0px;"><b id="educationtxt">Education</b></p>
+           <p class="Dsply indent" id="educationtxtitm1">Electronic Music (Bsc 2000). University of Hertfordshire
+           <p class="Dsply indent"id="educationtxtitm2">Violin (Dip. 2018). Conservatorio di Perugia
 
-         <p><b class="Dsply" id="skillstxt">Skills</b></p>
-         <p class="Dsply indent" id="languagestxtitm1">Italian: Pretty fluent. C1 on the CILS CEFR test.
-         <p class="Dsply indent" id="languagestxtitm2">Japanese: Not bad. N3 on the JLPT.
+           <p><b class="Dsply" id="skillstxt">Skills</b></p>
+           <p class="Dsply indent" id="languagestxtitm1">Italian: Pretty fluent. C1 on the CILS CEFR test.
+           <p class="Dsply indent" id="languagestxtitm2">Japanese: Not bad. N3 on the JLPT.
 
-         <p class="Dsply"><b id="programmingtxt">Coding</b></p>
-         <p class="Dsply indent" id="programmingtxtitm1">HTML, CSS, Javascript: Good working knowledge of web design from scratch.</p>
-         <p class="Dsply indent" id="programmingtxtitm2">Puredata: Extensive knwoledge of sound design and app design for audio and music production.</p>
+           <p class="Dsply"><b id="programmingtxt">Coding</b></p>
+           <p class="Dsply indent" id="programmingtxtitm1">HTML, CSS, Javascript: Good working knowledge of web design from scratch.</p>
+           <p class="Dsply indent" id="programmingtxtitm2">Puredata: Extensive knwoledge of sound design and app design for audio and music production.</p>
+       </div>
+
      </div>
 
   </div>
 
-
-
-
-
 </div>
 
 
+<!-- Project Details Modal -->
+<div id="myModal" class="modal">
+  <!-- X icon -->
+  <span class="close">&times;</span>
 
-</div>
-<!-- Prjct Detail Modal -->
-
-  <div id="myModal" class="modal">
-
-    <span class="close">&times;</span>
-
-    <div id="CentralColumn" class="centralcolumn" style="margin: auto; padding: 0; border-radius: 10px;" align="center">
+  <div id="CentralColumn" class="centralcolumn" style="margin: auto; padding: 0; border-radius: 10px;" align="center">
     <!--  -->
+    <div style="float: left; background-color: rgba(255,255,255, 0.9); width: 100%; border-radius: 10px;">
+          <div class="modalinnercolumn" align="center" style="overflow-wrap: break-word;">
+              <div style="margin-right: 15%; width: 100%; float: left;  margin-bottom: 50px; padding-right: 2.5%;">
+                <h1 id="MdlPrjctTtl" style="width: 100%; text-align: right;">mono</h1><br>
+                <p id="PrjctItmIntroTxt" style="font-size: 0.9em; text-align: right; margin-bottom: 20px;">Mono. An SVG based visual dictionary coded into HTML, CSS, and javascript and nothing else.</p>
+                <p style="display: inline-block; word-wrap: break-word; overflow-wrap: break-word; text-align: right; font-size: 0.9em; color: #0094a1; margin-top: 0px; margin-bottom: 0px; width: 100%; position: relative; margin-bottom: 20px;"><span style="color: #000;">Github hosting: </span><a style="pointer: cursor;" href="" target="_blank" id="MdlPrjctAddr">https://gperilli.github.io/mono/index.html</a></p>
+                <p style="display: inline-block; word-wrap: break-word; overflow-wrap: break-word; text-align: right; font-size: 0.9em; color: #0094a1; margin-top: 0px; margin-bottom: 0px; width: 100%; position: relative;"><span style="color: #000;">Code Repository: </span><a style="pointer: cursor;" href="" target="_blank" id="MdlPrjctRepo">https://github.com/gperilli/mono</a></p>
+              </div>
 
-      <div style="float: left; background-color: rgba(255,255,255, 0.9); width: 100%; border-radius: 10px;">
-            <div class="modalinnercolumn" align="center" style="overflow-wrap: break-word;">
-                <div style="margin-right: 15%; width: 100%; float: left;  margin-bottom: 50px; padding-right: 2.5%;">
-                  <h1 id="MdlPrjctTtl" style="width: 100%; text-align: right;">mono</h1><br>
-                  <p id="PrjctItmIntroTxt" style="font-size: 0.9em; text-align: right; margin-bottom: 20px;">Mono. An SVG based visual dictionary coded into HTML, CSS, and javascript and nothing else.</p>
-                  <p style="display: inline-block; word-wrap: break-word; overflow-wrap: break-word; text-align: right; font-size: 0.9em; color: #0094a1; margin-top: 0px; margin-bottom: 0px; width: 100%; position: relative; margin-bottom: 20px;"><span style="color: #000;">Github hosting: </span><a style="pointer: cursor;" href="" target="_blank" id="MdlPrjctAddr">https://gperilli.github.io/mono/index.html</a></p>
-                  <p style="display: inline-block; word-wrap: break-word; overflow-wrap: break-word; text-align: right; font-size: 0.9em; color: #0094a1; margin-top: 0px; margin-bottom: 0px; width: 100%; position: relative;"><span style="color: #000;">Code Repository: </span><a style="pointer: cursor;" href="" target="_blank" id="MdlPrjctRepo">https://github.com/gperilli/mono</a></p>
-                </div>
+              <div align="left" style="float: left; margin-bottom: 40px;">
+                 <div class="" style="width: 33.33%; float: left;">
+                   <img class="MdlRespImgs" src="/Mono-RespDemoImg-PC.png" style="width: 100%; margin-left: 10%;">
+                 </div>
 
-                <div align="left" style="float: left; margin-bottom: 40px;">
-                   <div class="" style="width: 33.33%; float: left;">
-                     <img class="MdlRespImgs" src="/Mono-RespDemoImg-PC.png" style="width: 100%; margin-left: 10%;">
-                   </div>
+                 <div class="" align="right" style="width: 33.33%; float: left;">
+                   <img class="MdlRespImgs" src="/Mono-RespDemoImg-Tablet.png" style="width: 39%;">
+                 </div>
 
-                   <div class="" align="right" style="width: 33.33%; float: left;">
-                     <img class="MdlRespImgs" src="/Mono-RespDemoImg-Tablet.png" style="width: 39%;">
-                   </div>
+                 <div class="" align="right" style="width: 33.33%; float: left;">
+                   <img class="MdlRespImgs" src="/Mono-RespDemoImg-Phone.png" style="cursor: pointer; width: 28%; margin-right: 15%;">
+                 </div>
+              </div>
 
-                   <div class="" align="right" style="width: 33.33%; float: left;">
-                     <img class="MdlRespImgs" src="/Mono-RespDemoImg-Phone.png" style="cursor: pointer; width: 28%; margin-right: 15%;">
-                   </div>
-                </div>
+              <div class="MdlColumn" style="width: 100%; float: left; margin-bottom: 20px;">
+                <div class="MdlPrjctImgCnt" style=""><img class="MdlPrjctImgs" src="/Mono-PortImg1.png" style=""></div>
+                <div class="MdlPrjctImgCnt" style=""><img class="MdlPrjctImgs" src="/Mono-PortImg2.png" style=""></div>
+                <div class="MdlPrjctImgCnt" style=""><img class="MdlPrjctImgs" src="/Mono-PortImg3.png" style=""></div>
+                <div class="MdlPrjctImgCnt" style=""><img class="MdlPrjctImgs" src="/Mono-PortImg4.png" style=""></div>
+              </div>
+              <!-- Project Specific Stuff Injected Here -->
+              <br>
+              <div id="XtrSpceBlk" align="left" style="padding-left: 3.5%; padding-right: 3.5%; margin-bottom: 20px; width: 100%; border: 0px solid #000; float: left;">
+              </div>
+          </div>
 
-                <div class="MdlColumn" style="width: 100%; float: left; margin-bottom: 20px;">
-                  <div class="MdlPrjctImgCnt" style=""><img class="MdlPrjctImgs" src="/Mono-PortImg1.png" style=""></div>
-                  <div class="MdlPrjctImgCnt" style=""><img class="MdlPrjctImgs" src="/Mono-PortImg2.png" style=""></div>
-                  <div class="MdlPrjctImgCnt" style=""><img class="MdlPrjctImgs" src="/Mono-PortImg3.png" style=""></div>
-                  <div class="MdlPrjctImgCnt" style=""><img class="MdlPrjctImgs" src="/Mono-PortImg4.png" style=""></div>
-                </div>
-
-                <div id="XtrSpceBlk" align="left" style="padding-left: 3.5%; padding-right: 3.5%; margin-bottom: 20px;">
-                </div>
-            </div>
-
-
-
-        </div>
       </div>
-  <!-- End Modal -->
+    </div>
+
   <!-- Spacer -->
-    <div style="height: 40px; width: 100%; float: left;"></div>
-
-  </div>
-
-
+  <div class="spacer border" style=""></div>
+<!-- End Modal -->
+</div>
 
 </body>
+<audio id="myAudio" src="" onended="AudioEnded()">
+  Your browser does not support the audio element.
+</audio>
+
 
 </html>
 
 
 <script>
-
 
 function LoadSeq(L1, INPT) {
   //Check Local Storage for Language setting
@@ -448,25 +562,27 @@ function LoadSeq(L1, INPT) {
     }
   }
   //Number of Projects to display
-  PrjctsDsplyN = 4;
+  PrjctsDsplyN = Prjcts["T"];
   //Display these projects in this order
   PrjctsToDsply = [3, 2, 4, 1];
 
   //Project Loader
   PrjctLoader(L1);
+  //Audio Work Loader
+  AWrkLoader();
   //language setting
   LSel(L1, 'LD');
   //Stagger load
   StaggerLd();
-
 }
 
 	PgeTxt = {
 	ENG: {
-		//Page text
+		//Page Titles text
 		projects: "Projects",
 		mytracks: "My Tracks",
 		aboutme: "About Me",
+    audiowork: "Audio Work",
 
 		//CV Text
     gperilli: "Gareth Perilli",
@@ -483,10 +599,11 @@ function LoadSeq(L1, INPT) {
 		},
 
 	JPN: {
-		//Page text
+		//Page Titles text
 		projects: "プロジェクト",
 		mytracks: "作曲",
 		aboutme: "私について",
+    audiowork: "オーディオワーク",
 
 		//CV Text
     gperilli: "ギャレス ペリーリ",
@@ -504,6 +621,13 @@ function LoadSeq(L1, INPT) {
 	}
 
 
+document.getElementById("LSelENG").onclick = function() {
+  LSel('ENG', 'USR');
+}
+document.getElementById("LSelJPN").onclick = function() {
+  LSel('JPN', 'USR');
+}
+
 function LSel(L1, INPT) {
 
   localStorage.setItem("GPerilliPortLng", L1);
@@ -517,9 +641,11 @@ function LSel(L1, INPT) {
 	document.getElementById("projects").innerHTML = PgeTxt[L1]["projects"];
 	document.getElementById("mytracks").innerHTML = PgeTxt[L1]["mytracks"];
 	document.getElementById("aboutme").innerHTML = PgeTxt[L1]["aboutme"];
+  document.getElementById("audiowork").innerHTML = PgeTxt[L1]["audiowork"];
   document.getElementById("projectsMnu").innerHTML = PgeTxt[L1]["projects"];
 	document.getElementById("mytracksMnu").innerHTML = PgeTxt[L1]["mytracks"];
 	document.getElementById("aboutmeMnu").innerHTML = PgeTxt[L1]["aboutme"];
+  document.getElementById("audioworkMnu").innerHTML = PgeTxt[L1]["audiowork"];
 
 	//briefcv
   document.getElementById("gperilli").innerHTML = PgeTxt[L1]["gperilli"];
@@ -545,6 +671,7 @@ function LSel(L1, INPT) {
 }
 
 Prjcts = {
+T: 4,
 1: {
   //
   PrjctItmXFleref: "KnhsGe1",
@@ -645,9 +772,94 @@ function PrjctLdrHtmlInject(PrjctItmXHref, PrjctItmXCvrImg, PrjctItmXId, PrjctIt
   document.getElementById("PrjctGlryCnt").insertAdjacentHTML("beforeend", PrjctItmX);
 }
 
+AudioWorkAudItms = {
+T: 3,
+1: {
+  //
+  AudItmName: "Analog Tom - Distorted G sharp tone with tremolo",
+  AudItmSrc: "tom-analog-dstrt-Gstone-trem.wav",
+  AudItmDuration: "c.1s",
+  AudItmTags: 3,
+  AudItmTag1: "Kicks",
+  AudItmTag2: "AnalogTom",
+  AudItmTag3: "",
+ },
+
+ 2: {
+   //
+   AudItmName: "Analog Tom - Segmented",
+   AudItmSrc: "tom-analog-seged.wav",
+   AudItmDuration: "c.1s",
+   AudItmTags: 3,
+   AudItmTag1: "Kicks",
+   AudItmTag2: "",
+   AudItmTag3: "StepSeq",
+  },
+
+  3: {
+    //
+    AudItmName: "Noise Snare - Looped Ver. 4",
+    AudItmSrc: "snare-noise-repmod4-tne.wav",
+    AudItmDuration: ">1s",
+    AudItmTags: 3,
+    AudItmTag1: "Snare",
+    AudItmTag2: "AnalogTom",
+    AudItmTag3: "StepSeq",
+   },
+}
+
+function AWrkLoader() {
+  //AudioWorkBlk
+
+  AudioWorkAudItmsDsplyN = AudioWorkAudItms["T"];
+  //Display these projects in this order
+  AudioWorkAudItmsToDsply = [1, 3, 2];
+
+    for (i = 1; i < (AudioWorkAudItms["T"] + 1); i++) {
+        var AudioWorkAudItmN = AudioWorkAudItmsToDsply[i - 1];
+        var AudioWorkAudItmName = AudioWorkAudItms[AudioWorkAudItmN]["AudItmName"];
+        var AudioWorkAudItmDuration = AudioWorkAudItms[AudioWorkAudItmN]["AudItmDuration"];
+        var AudioWorkAudItmTag1 = AudioWorkAudItms[AudioWorkAudItmN]["AudItmTag1"];
+        var AudioWorkAudItmTag1Class = "Tag-".concat(AudioWorkAudItms[AudioWorkAudItmN]["AudItmTag1"]);
+        var AudioWorkAudItmTag2 = AudioWorkAudItms[AudioWorkAudItmN]["AudItmTag2"];
+        var AudioWorkAudItmTag2Class = "Tag-".concat(AudioWorkAudItms[AudioWorkAudItmN]["AudItmTag2"]);
+        var AudioWorkAudItmTag3 = AudioWorkAudItms[AudioWorkAudItmN]["AudItmTag3"];
+        var AudioWorkAudItmTag3Class = "Tag-".concat(AudioWorkAudItms[AudioWorkAudItmN]["AudItmTag3"]);
+
+
+        var AudioWorkSmple = `
+          <div class="AudioPlayerBlk" id="AudioWorkDemoPlayerBlk${AudioWorkAudItmN}" style="border: 1px solid #000; border-radius: 5px; margin-top: 5px; margin-right: 5px; margin-bottom: 5px; padding-left: 2px; padding-right: 3px; padding-bottom: 2px; display: inline-block;">
+            <h5>
+            <div id="AudItm" class="icon baseline" onClick="AudPlyPse('${AudioWorkAudItmN}', 'AudioWork')">
+              <svg class="Container" viewBox="0 0 300 300">
+                <g x="20%" y="15%" id="">
+                  <path class="AudBtn-PlayTri" d="m 95.514374,224.65227 c -0.05649,-49.76848 -0.112973,-99.53696 -0.16946,-149.30544 43.129016,24.83532 86.258026,49.67064 129.387036,74.50596 -43.07252,24.93316 -86.14505,49.86632 -129.217576,74.79948 z"/>
+                </g>
+                <g transform="translate(50, 45)" id="" class="AudBtn-PauseBrs">
+                  <rect x="115" y="26" ry="8" width="47" height="150" class="AudBtn-PauseRectL" />
+                  <rect x="35" y="26" ry="8" width="47" height="150" class="AudBtn-PauseRectR" />
+                </g>
+              </svg>
+            </div>
+            ${AudioWorkAudItmName} <span style="float: right; margin-top: 1.5px; margin-left: 20px;">duration: ${AudioWorkAudItmDuration}</span>
+
+            </h5>
+            <br>
+            <h5>
+            <span style="width: 100%; float: left;">
+              <span class="AudTags ${AudioWorkAudItmTag1Class}" style="">${AudioWorkAudItmTag1}</span>
+              <span class="AudTags ${AudioWorkAudItmTag2Class}" style="">${AudioWorkAudItmTag2}</span>
+              <span class="AudTags ${AudioWorkAudItmTag3Class}" style="">${AudioWorkAudItmTag3}</span>
+            </span>
+            </h5>
+          </div>
+        `
+        document.getElementById("AudioWorkBlk").insertAdjacentHTML("beforeend", AudioWorkSmple);
+      }
+}
 function StaggerLd() {
   //Dsply
-  for (i = 0; i < 25; i++) {
+  for (i = 0; i < 26; i++) {
     (function(i){
     setTimeout(function(){
       document.getElementsByClassName("Dsply")[i].style.opacity = "1";
@@ -657,7 +869,7 @@ function StaggerLd() {
 }
 
 var monoXtra = 0;
-
+var stepseqXtra = 0;
 // Project Details Modal display process
 function modaldisp(x) {
 
@@ -667,16 +879,17 @@ function modaldisp(x) {
 	// When the user clicks on <span> (x), close the modal
 
   //Modal Responsiveness Images
+  MdlRespImgs = document.getElementsByClassName("MdlRespImgs")
   if (Prjcts[x]["PrjctItmResp"] == '3') {
-    document.getElementsByClassName("MdlRespImgs")[0].src = "".concat(Prjcts[x]["PrjctItmXFleref"], "-RespDemoImg-PC.png");
-    document.getElementsByClassName("MdlRespImgs")[1].src = "".concat(Prjcts[x]["PrjctItmXFleref"], "-RespDemoImg-Tablet.png");
-    document.getElementsByClassName("MdlRespImgs")[2].src = "".concat(Prjcts[x]["PrjctItmXFleref"], "-RespDemoImg-Phone.png");
-    document.getElementsByClassName("MdlRespImgs")[1].style.display = "block";
-    document.getElementsByClassName("MdlRespImgs")[2].style.display = "block";
+    MdlRespImgs[0].src = "".concat(Prjcts[x]["PrjctItmXFleref"], "-RespDemoImg-PC.png");
+    MdlRespImgs[1].src = "".concat(Prjcts[x]["PrjctItmXFleref"], "-RespDemoImg-Tablet.png");
+    MdlRespImgs[2].src = "".concat(Prjcts[x]["PrjctItmXFleref"], "-RespDemoImg-Phone.png");
+    MdlRespImgs[1].style.display = "block";
+    MdlRespImgs[2].style.display = "block";
   } else {
-    document.getElementsByClassName("MdlRespImgs")[0].src = "".concat(Prjcts[x]["PrjctItmXFleref"], "-RespDemoImg-PC.png");
-    document.getElementsByClassName("MdlRespImgs")[1].style.display = "none";
-    document.getElementsByClassName("MdlRespImgs")[2].style.display = "none";
+    MdlRespImgs[0].src = "".concat(Prjcts[x]["PrjctItmXFleref"], "-RespDemoImg-PC.png");
+    MdlRespImgs[1].style.display = "none";
+    MdlRespImgs[2].style.display = "none";
   }
 
 
@@ -687,13 +900,11 @@ function modaldisp(x) {
   //Titles
   L1 = localStorage.getItem("GPerilliPortLng");
   document.getElementById("MdlPrjctTtl").innerHTML = Prjcts[x]["PrjctItmXNme".concat(L1)];
-
   //MdlPrjctAddr,   MdlPrjctRepo
   document.getElementById("MdlPrjctAddr").innerHTML = Prjcts[x]["PrjctItmXHref"];
   document.getElementById("MdlPrjctAddr").href  = Prjcts[x]["PrjctItmXHref"];
   document.getElementById("MdlPrjctRepo").innerHTML = Prjcts[x]["PrjctItmXRepo"];
   document.getElementById("MdlPrjctRepo").href  = Prjcts[x]["PrjctItmXRepo"];
-
   //MdlPrjct PrjctItmIntro
   document.getElementById("PrjctItmIntroTxt").innerHTML = Prjcts[x]["PrjctItmIntro"];
 
@@ -701,13 +912,12 @@ function modaldisp(x) {
   console.log("x var is ........................................".concat(x));
   //Extra widget component for mono project
   MonoPrjctExtras(x);
-
+  StepSeqPrjctExtras(x);
 
   span.onclick = function() {
 	  modal.style.display = "none";
 	}
   modal.style.display = "block";
-
 
 }
 
@@ -746,6 +956,7 @@ document.getElementsByTagName("BODY")[0].onresize = function() {
     monoXtra = 0;
     setTimeout(WdgtReload(), 2000)
   }
+}
 
 function WdgtReload() {
   var MonoIfrme = `
@@ -755,6 +966,175 @@ function WdgtReload() {
   monoXtra = 1;
 }
 
-  //document.getElementById("demo").innerHTML = txt;
-};
+StepSeqAudItms = {
+T: 3,
+1: {
+  //
+  AudItmName: "StepSeq Demo 1",
+  AudItmSrc: "",
+  AudItmDuration: "---",
+  AudItmTags: 3,
+  AudItmTag1: "StepSeq",
+  AudItmTag2: "Drum Loops",
+  AudItmTag3: "Patterns",
+ },
+
+ 2: {
+   //
+   AudItmName: "StepSeq Demo 2",
+   AudItmSrc: "",
+   AudItmDuration: "---",
+   AudItmTags: 3,
+   AudItmTag1: "StepSeq",
+   AudItmTag2: "Drum Loops",
+   AudItmTag3: "Patterns",
+  },
+
+  3: {
+    //
+    AudItmName: "StepSeq Demo 3",
+    AudItmSrc: "",
+    AudItmDuration: "---",
+    AudItmTags: 3,
+    AudItmTag1: "StepSeq",
+    AudItmTag2: "Drum Loops",
+    AudItmTag3: "Patterns",
+   },
+}
+
+
+function StepSeqPrjctExtras(x) {
+  StepSeqAudItmsDsplyN = StepSeqAudItms["T"];
+  //Display these projects in this order
+  StepSeqAudItmsToDsply = [1, 3, 2];
+  if (stepseqXtra == 0 && x == 4) {
+
+    for (i = 1; i < (StepSeqAudItms["T"] + 1); i++) {
+        var StepSeqAudItmN = StepSeqAudItmsToDsply[i - 1];
+        var StepSeqAudItmName = StepSeqAudItms[StepSeqAudItmN]["AudItmName"];
+        var StepSeqAudItmDuration = StepSeqAudItms[StepSeqAudItmN]["AudItmDuration"];
+        var StepSeqAudItmTag1 = StepSeqAudItms[StepSeqAudItmN]["AudItmTag1"];
+        var StepSeqAudItmTag1Class = "Tag-".concat(StepSeqAudItms[StepSeqAudItmN]["AudItmTag1"]);
+        var StepSeqAudItmTag2 = StepSeqAudItms[StepSeqAudItmN]["AudItmTag2"];
+        var StepSeqAudItmTag2Class = "Tag-".concat(StepSeqAudItms[StepSeqAudItmN]["AudItmTag2"]);
+        var StepSeqAudItmTag3 = StepSeqAudItms[StepSeqAudItmN]["AudItmTag3"];
+        var StepSeqAudItmTag3Class = "Tag-".concat(StepSeqAudItms[StepSeqAudItmN]["AudItmTag3"]);
+
+
+        var StepSeqSmple = `
+          <div class="AudioPlayerBlk" id="StepSeqDemoPlayerBlk${StepSeqAudItmN}" style="">
+            <h5>
+            <div id="AudItm" class="icon baseline" onClick="AudPlyPse('${StepSeqAudItmN}', 'StepSeq')">
+              <svg class="Container" viewBox="0 0 300 300">
+                <g x="20%" y="15%" id="">
+                  <path class="AudBtn-PlayTri" d="m 95.514374,224.65227 c -0.05649,-49.76848 -0.112973,-99.53696 -0.16946,-149.30544 43.129016,24.83532 86.258026,49.67064 129.387036,74.50596 -43.07252,24.93316 -86.14505,49.86632 -129.217576,74.79948 z"/>
+                </g>
+                <g transform="translate(50, 45)" id="" class="AudBtn-PauseBrs">
+                  <rect x="115" y="26" ry="8" width="47" height="150" class="AudBtn-PauseRectL" />
+                  <rect x="35" y="26" ry="8" width="47" height="150" class="AudBtn-PauseRectR" />
+                </g>
+              </svg>
+            </div>
+            ${StepSeqAudItmName} <span style="float: right; margin-top: 1.5px; margin-left: 20px;">duration: ${StepSeqAudItmDuration}</span>
+
+            </h5>
+            <br>
+            <h5>
+            <span style="width: 100%; float: left;">
+              <span class="AudTags ${StepSeqAudItmTag1Class}" style="">${StepSeqAudItmTag1}</span>
+              <span class="AudTags ${StepSeqAudItmTag2Class}" style="">${StepSeqAudItmTag2}</span>
+              <span class="AudTags ${StepSeqAudItmTag3Class}" style="">${StepSeqAudItmTag3}</span>
+            </span>
+            </h5>
+          </div>
+        `
+        document.getElementById("XtrSpceBlk").insertAdjacentHTML("beforeend", StepSeqSmple);
+
+
+
+
+    }
+    stepseqXtra = 1;
+  }
+
+
+  if (stepseqXtra == 1 && x !== 4) {
+
+    for (i = 0; i < StepSeqAudItms["T"]; i++) {
+      var StepSeqAudItmN = StepSeqAudItmsToDsply[i];
+      document.getElementById("StepSeqDemoPlayerBlk".concat(StepSeqAudItmN)).remove();
+    }
+    stepseqXtra = 0;
+  }
+
+  if (stepseqXtra == 0 && x !== 4) {
+    stepseqXtra = 0;
+  }
+}
+
+const PlPsStat = {1: 0, 2: 0, 3: 0};
+
+var CurrentN = 0;
+var PreviousN = 99;
+PlPsStat[CurrentN] = 0;
+PlPsStat[PreviousN] = 0;
+
+function AudPlyPse(n, src) {
+
+  CurrentN = parseFloat(n);
+  if (src == 'StepSeq') {
+    AudSrc = StepSeqAudItms[CurrentN]["AudItmSrc"];
+  } else {
+    AudSrc = AudioWorkAudItms[CurrentN]["AudItmSrc"];
+  }
+
+  console.log("Previous N: ".concat(PreviousN));
+  console.log("Current N: ".concat(CurrentN));
+  console.log("Play pause stat previous: ".concat(PlPsStat[PreviousN]));
+  console.log("Play pause stat current: ".concat(PlPsStat[CurrentN]));
+
+  //Play new Audio Item, no interruption
+  if ((PreviousN != CurrentN && PlPsStat[CurrentN] == 0) || (PreviousN != CurrentN && PlPsStat[CurrentN] == 1) || (PreviousN == CurrentN && PlPsStat[CurrentN] == 0)) {
+    //
+    console.log("........................Play New Audio Item or Play from Paused........................");
+    console.log("Play/Pause stat (should be 0): ".concat(PlPsStat[CurrentN]));
+    console.log("Previous N: ".concat(PreviousN));
+    console.log("Current N: ".concat(CurrentN));
+    if ((PreviousN != CurrentN && PlPsStat[CurrentN] == 0) || (PreviousN != CurrentN && PlPsStat[CurrentN] == 1)) {
+      document.getElementById("myAudio").src = AudSrc;
+    }
+
+    document.getElementById("myAudio").play();
+    PlPsStat[CurrentN] = 1;
+    PreviousN = CurrentN;
+  } else if (PreviousN == CurrentN && PlPsStat[PreviousN] == 1) {
+    //Pause CurrentN audio
+    console.log("........................Pause Audio Item........................");
+    console.log("Play/Pause stat (should be 1): ".concat(PlPsStat[PreviousN]));
+    console.log("Previous N: ".concat(PreviousN));
+    console.log("Current N: ".concat(CurrentN));
+    document.getElementById("myAudio").pause();
+    PlPsStat[CurrentN] = 0;
+
+    //set icon to pause icon
+
+  } else if (PreviousN != CurrentN && PlPsStat[PreviousN] == 1) {
+    console.log("........................Interrupt Audio Item........................");
+    document.getElementById("myAudio").pause();
+    document.getElementById("myAudio").src = AudSrc;
+    document.getElementById("myAudio").play();
+    PlPsStat[PreviousN] = 0;
+    PlPsStat[CurrentN] = 1;
+    PreviousN = CurrentN;
+  }
+
+
+
+}
+
+function AudioEnded() {
+  //Set CurrentN PLyPseStat to 0
+  PlPsStat[CurrentN] = 0;
+}
+
 </script>

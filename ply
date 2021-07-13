@@ -1,0 +1,69 @@
+  /* Play/Pause Button */
+.AudBtn-PauseBrs {
+	fill: #000;
+	display: none;
+}
+.AudBtn-PlayTri {
+	fill:#000;
+	stroke:#000;
+	stroke-width:17;
+	stroke-linejoin:round;
+}
+.icon svg:hover .AudBtn-PauseBrs{
+	fill: #fff;
+}
+.icon svg:hover .AudBtn-PlayTri{
+	fill:#fff;
+	stroke:#fff;
+}
+  
+  var AudBtnPlayTriCl = document.getElementsByClassName("AudBtn-PlayTri");
+     AudBtnPlayTriCl[i].setAttribute('d', 'm 95.514374,224.65227 c -0.05649,-49.76848 -0.112973,-99.53696 -0.16946,-149.30544 43.129016,24.83532 86.258026,49.67064 129.387036,74.50596 -43.07252,24.93316 -86.14505,49.86632 -129.217576,74.79948 z');
+   }
+
+   //Audio Button Pause Icon Loader
+   for (var i = 0; i < 37; ++i) {
+     var AudBtnPauseRectCl = document.getElementsByClassName("AudBtn-PauseRectL");
+     AudBtnPauseRectCl[i].setAttribute('width', '47');
+     AudBtnPauseRectCl[i].setAttribute('height', '150');
+     AudBtnPauseRectCl[i].setAttribute('x', '115');
+     AudBtnPauseRectCl[i].setAttribute('y', '26');
+     AudBtnPauseRectCl[i].setAttribute('ry', '8');
+   }
+
+   for (var i = 0; i < 37; ++i) {
+     var AudBtnPauseRectCl = document.getElementsByClassName("AudBtn-PauseRectR");
+     AudBtnPauseRectCl[i].setAttribute('width', '47');
+     AudBtnPauseRectCl[i].setAttribute('height', '150');
+     AudBtnPauseRectCl[i].setAttribute('x', '35');
+     AudBtnPauseRectCl[i].setAttribute('y', '26');
+     AudBtnPauseRectCl[i].setAttribute('ry', '8');
+   }
+   
+   
+ <h5>
+	<div class="icon baseline" onClick="">
+		<svg class="Container" viewBox="0 0 300 300">
+			<g x="20%" y="15%" id="">
+				<path class="AudBtn-PlayTri" d="m 95.514374,224.65227 c -0.05649,-49.76848 -0.112973,-99.53696 -0.16946,-149.30544 43.129016,24.83532 86.258026,49.67064 129.387036,74.50596 -43.07252,24.93316 -86.14505,49.86632 -129.217576,74.79948 z"/>
+			</g>
+			<g transform="translate(50, 45)" id="" class="AudBtn-PauseBrs">
+				<rect x="115" y="26" ry="8" width="47" height="150" class="AudBtn-PauseRectL" />
+				<rect x="35" y="26" ry="8" width="47" height="150" class="AudBtn-PauseRectR" />
+			</g>
+		</svg>
+	</div>
+</h5>
+
+
+function PlyAllIcoOff() {
+	document.getElementById("PlyAllIcoOff").style.display = 'block';
+	document.getElementById("PlyAllIcoOn").style.display = 'none';
+	PlyAllStng = 0;
+}
+
+function PlyAllIcoOn() {
+	document.getElementById("PlyAllIcoOff").style.display = 'none';
+	document.getElementById("PlyAllIcoOn").style.display = 'block';
+	PlyAllStng = 1;
+}
